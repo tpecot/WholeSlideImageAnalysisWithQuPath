@@ -6,7 +6,7 @@ min_nuclei_area = 15
 
 // Specify the model directory (you will need to change this!)
 def pathInput = buildFilePath(PROJECT_BASE_DIR)
-def pathModel = pathInput + "/TissueNet_all.pb"
+def pathModel = pathInput + "/script/stardist_model_1_channel.pb"
 
 def stardist_segmentation = StarDist2D.builder(pathModel)
         .threshold(0.5)              // Prediction threshold
@@ -30,7 +30,6 @@ if (pathObjects.isEmpty()) {
 // Run detection for the selected objects
 stardist_segmentation.detectObjects(imageData, pathObjects)
 
-//def toDelete = getDetectionObjects().findAll {measurement(it, 'Circularity') < 0.9}
 def toDelete = getDetectionObjects().findAll {measurement(it, 'Area µm^2') < min_nuclei_area}
 removeObjects(toDelete, true)
 

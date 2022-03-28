@@ -5,7 +5,8 @@ import qupath.imagej.gui.ImageJMacroRunner
 min_nuclei_area = 15
 
 // Specify the model directory (you will need to change this!)
-def pathModel = "C:/Work/QuPath/scripts/StardistModels/TissueNet_all.pb"
+def pathInput = buildFilePath(PROJECT_BASE_DIR)
+def pathModel = pathInput + "/script/stardist_model_1_channel.pb"
 
 def stardist_segmentation = StarDist2D.builder(pathModel)
         .threshold(0.5)              // Prediction threshold
@@ -29,8 +30,7 @@ def annotations = hierarchy.getAnnotationObjects()
 // Run detection for the selected objects
 stardist_segmentation.detectObjects(imageData, annotations)
 
-//def toDelete = getDetectionObjects().findAll {measurement(it, 'Circularity') < 0.9}
-def toDelete = getDetectionObjects().findAll {measurement(it, 'Area µm^2') < min_nuclei_area}
+def toDelete = getDetectionObjects().findAll {measurement(it, 'Nucleus: Area µm^2') < min_nuclei_area}
 removeObjects(toDelete, true)
 
 
