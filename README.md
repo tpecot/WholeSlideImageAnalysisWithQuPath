@@ -4,7 +4,19 @@ This is a 2-day workshop focusing on the quantitative analysis of H&E and fluore
 
 Participants learn how to annotate regions, to perform stain deconvolution, to segment nuclei (watershed-based method and pretrained deep learning models), to classify pixels and cells (shallow machine learning), to identify fluorescent markers associated with cells (intensity thresholding and shallow machine learning) and to characterize cell sub-populations (region clustering). The first day focuses on H&E and H-DAB whole-slide images. The second day focuses on multiplexed fluorescence whole-slide images.
 
-A pdf introduces pyramidal representation of images and describes the background required to understand the different analyses conducted through the workshop. Links to video tutorials are available in the pdf to see how each "hands on" session can be done. The images used in these sessions are available at https://zenodo.org/record/6391629. The scripts, Stardist model and segmentations for the multiplexed image as a geojsaon file are available in the script folder.
+A pdf introduces pyramidal representation of images and describes the background required to understand the different analyses conducted through the workshop. Links to video tutorials are available in the pdf to see how each "hands on" session can be done. The images used in these sessions are available at https://zenodo.org/record/6391629. The scripts and Stardist model are available in the script folder.
+
+# Video tutorials
+[QuPath installation, data and script downloading](https://youtu.be/4RqV4QpYFo0) <br>
+[Project creation and annotations](https://youtu.be/vr9w_LYtSso) <br>
+[Stain deconvolution](https://youtu.be/fHbsWGF47Zg) <br>
+[Pixel classification (epithelium/stroma for H&E images)](https://youtu.be/kGvZRBEeqI0) <br>
+[Nuclei segmentation (watershed) and DAB positive cells](https://youtu.be/ASY7sepHHyw) <br>
+[Nuclei segmentation (stardist) and DAB positive cells (thresholding)](https://youtu.be/3Dsq9NljCVs) <br>
+[Visualization of fluorescence images](https://youtu.be/BIF9KHu1RLk) <br>
+[Pixel classification (epithelium/stroma for fluorescence images)](https://youtu.be/VbcTe7bawRs) <br>
+[Nuclei segmentation (stardist)](https://youtu.be/GBFBVT2stMQ) <br>
+[Object classification for marker identification](https://youtu.be/HI2-BNpjKmo) <br>
 
 # Citations
 If you use QuPath, please cite: <br> 
