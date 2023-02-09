@@ -17,6 +17,9 @@ A pdf introduces pyramidal representation of images and describes the background
 [Pixel classification (epithelium/stroma for fluorescence images)](https://youtu.be/VbcTe7bawRs) <br>
 [Nuclei segmentation (stardist)](https://youtu.be/GBFBVT2stMQ) <br>
 [Object classification for marker identification](https://youtu.be/HI2-BNpjKmo) <br>
+[Cellpose installation for QuPath and Fiji](https://youtu.be/A_PW_N0np9A) <br>
+[Cellpose GPU installation for QuPath and Fiji](https://youtu.be/yx4w4E4v1uM) <br>
+[Muscle fiber segmentation and muscle fiber type classification with QuPath](https://youtu.be/C0R1cz2hWQg) <br>
 
 # Citations
 If you use QuPath, please cite: <br> 
