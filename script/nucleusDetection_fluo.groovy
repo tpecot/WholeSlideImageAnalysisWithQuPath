@@ -16,6 +16,7 @@ def stardist_segmentation = StarDist2D
                 .percentiles(1, 99.8)  // Calculate image percentiles to use for normalization
                 .build()
         	)
+        .includeProbability(true)    // Include prediction probability as measurement
         .threshold(0.5)              // Prediction threshold
         .pixelSize(0.5)              // Resolution for detection
         .channels(0)
