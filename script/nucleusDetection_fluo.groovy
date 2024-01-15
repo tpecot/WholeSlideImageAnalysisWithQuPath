@@ -2,7 +2,7 @@ import qupath.ext.stardist.StarDist2D
 import qupath.lib.images.servers.ColorTransforms
 import qupath.imagej.gui.ImageJMacroRunner
 
-min_nuclei_area = 15
+min_nuclei_area = 0
 
 // Specify the model directory (you will need to change this!)
 def pathInput = buildFilePath(PROJECT_BASE_DIR)
