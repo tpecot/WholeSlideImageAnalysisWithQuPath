@@ -2,7 +2,7 @@ import qupath.ext.stardist.StarDist2D
 import qupath.lib.images.servers.ColorTransforms
 import qupath.imagej.gui.ImageJMacroRunner
 
-min_nuclei_area = 15
+min_nuclei_area = 0
 
 // Specify the model directory (you will need to change this!)
 def pathInput = buildFilePath(PROJECT_BASE_DIR)
@@ -17,6 +17,7 @@ def stardist_segmentation = StarDist2D
                 .build()
         	)
         .threshold(0.5)              // Prediction threshold
+        .includeProbability(true)    // Include prediction probability as measurement
         .pixelSize(0.5)              // Resolution for detection
         .channels(
             ColorTransforms.createColorDeconvolvedChannel(getCurrentImageData().getColorDeconvolutionStains(), 1),
