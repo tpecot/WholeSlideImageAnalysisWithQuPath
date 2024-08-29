@@ -19,7 +19,14 @@ A pdf introduces pyramidal representation of images and describes the background
 [Object classification for marker identification](https://youtu.be/HI2-BNpjKmo) <br>
 [Cellpose installation for QuPath and Fiji](https://youtu.be/A_PW_N0np9A) <br>
 [Cellpose GPU installation for QuPath and Fiji](https://youtu.be/yx4w4E4v1uM) <br>
-[Muscle fiber segmentation and muscle fiber type classification with QuPath](https://youtu.be/C0R1cz2hWQg) <br>
+[Muscle fiber segmentation and muscle fiber type classification with QuPath](https://youtu.be/C0R1cz2hWQg) <br><br>
+Analysis of multiplexed whole slide images with QuPath and Cytomap (MIFOBIO 2023 workshop): <br>
+[Load and visualize data with QuPath](https://youtu.be/sAFZtuM_waQ) <br>
+[Tissue and nuclei segmentations](https://youtu.be/aOztik5vabw) <br>
+[Export measurements from QuPath](https://youtu.be/xRqus2Q7IRE) <br>
+[Importing measurements into Cytomap](https://youtu.be/c2Tn2qSl_sA) <br>
+[Unsupervised cell clustering with Cytomap](https://youtu.be/U5fOWLiyVuw) <br>
+[Importing Cytomap clustering into QuPath](https://youtu.be/jud_PSzBWUw) <br>
 
 # Citations
 If you use QuPath, please cite: <br> 
