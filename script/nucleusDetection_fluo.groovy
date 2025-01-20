@@ -1,6 +1,5 @@
 import qupath.ext.stardist.StarDist2D
-import qupath.lib.images.servers.ColorTransforms
-import qupath.imagej.gui.ImageJMacroRunner
+import qupath.lib.scripting.QP
 
 min_nuclei_area = 0
 
@@ -18,7 +17,7 @@ def stardist_segmentation = StarDist2D
         	)
         .includeProbability(true)    // Include prediction probability as measurement
         .threshold(0.5)              // Prediction threshold
-        .pixelSize(0.5)              // Resolution for detection
+        .pixelSize(0.45)              // Resolution for detection
         .channels(0)
         .cellExpansion(5.0)          // Approximate cells based upon nucleus expansion
         .cellConstrainScale(1.5)     // Constrain cell expansion using nucleus size
@@ -27,15 +26,19 @@ def stardist_segmentation = StarDist2D
         .build()
 
         
-def imageData = getCurrentImageData()
-def pathObjects = getSelectedObjects()
-if (pathObjects.isEmpty()) {
-	Dialogs.showErrorMessage("StarDist", "Please select a parent object!")
-	return
+// Get annotations
+def annotations = QP.getSelectedObjects()
+// Get current image 
+var imageData = getCurrentImageData()
+
+// Run detection for the selected objects
+if (annotations.isEmpty()) {
+    QP.getLogger().error("No parent objects are selected!")
+    return
 }
 
 // Run detection for the selected objects
-stardist_segmentation.detectObjects(imageData, pathObjects)
+stardist_segmentation.detectObjects(imageData, annotations)
 
 def toDelete = getDetectionObjects().findAll {measurement(it, 'Nucleus: Area µm^2') < min_nuclei_area}
 removeObjects(toDelete, true)

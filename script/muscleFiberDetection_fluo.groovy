@@ -17,10 +17,16 @@ def cellpose = Cellpose2D.builder( pathModel )
         .measureIntensity()             // Add cell measurements (in all compartments)  
         .build()
         
+// Get annotations
+def annotations = QP.getAnnotationObjects()
+// Get current image 
+var imageData = getCurrentImageData()
+
 // Run detection for the selected objects
-def imageData = getCurrentImageData()
-def hierarchy = imageData.getHierarchy()
-def annotations = hierarchy.getAnnotationObjects()
+if (annotations.isEmpty()) {
+    QP.getLogger().error("No parent objects are selected!")
+    return
+}
 
 cellpose.detectObjects(imageData, annotations)
 
