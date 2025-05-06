@@ -27,11 +27,11 @@ def stardist_segmentation = StarDist2D
 
         
 // Get annotations
-def annotations = QP.getSelectedObjects()
+def annotations = QP.getAnnotationObjects()
 // Get current image 
 var imageData = getCurrentImageData()
 
-// Run detection for the selected objects
+// Run detection for annotations
 if (annotations.isEmpty()) {
     QP.getLogger().error("No parent objects are selected!")
     return
