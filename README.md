@@ -4,7 +4,7 @@ This is a 2-day workshop focusing on the quantitative analysis of H&E and fluore
 
 Participants learn how to annotate regions, to perform stain deconvolution, to segment nuclei (watershed-based method and pretrained deep learning models), to classify pixels and cells (shallow machine learning), to identify fluorescent markers associated with cells (intensity thresholding and shallow machine learning) and to characterize cell sub-populations (region clustering). The first day focuses on H&E and H-DAB whole-slide images. The second day focuses on multiplexed fluorescence whole-slide images.
 
-A pdf introduces pyramidal representation of images and describes the background required to understand the different analyses conducted through the workshop. Links to video tutorials are available in the pdf to see how each "hands on" session can be done. The images used in these sessions are available at https://zenodo.org/record/6391629. The scripts and Stardist model are available in the script folder.
+A pdf introduces pyramidal representation of images and describes the background required to understand the different analyses conducted through the workshop. Links to video tutorials are available in the pdf to see how each "hands on" session can be done. The images used in these sessions are available at [https://zenodo.org/record/6391629](https://zenodo.org/records/18301912). The scripts and Stardist model are available in the script folder.
 
 # Video tutorials
 [QuPath installation, data and script downloading](https://youtu.be/4RqV4QpYFo0) <br>
